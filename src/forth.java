@@ -14,7 +14,7 @@ public class forth {
             System.err.println("Error! File not found, exiting...");
         }
         ArrayList<String> tokens = lex(content);
-        ArrayList<String> dtc = compile(tokens);
+        ArrayList<Word> dtc = compile(tokens);
         n.close();
     }
     public static ArrayList<String> lex(String content) {
@@ -61,17 +61,19 @@ public class forth {
         }
         return t;
     }
-    public static ArrayList<String> compile(ArrayList<String> tokens) {
-        ArrayList<String> genCode = new ArrayList<>();
+    public static ArrayList<Word> compile(ArrayList<String> tokens) {
+        ArrayList<Word> genCode = new ArrayList<>();
         return genCode;
     }
 }
 @FunctionalInterface
-public int {
-
+interface Word {
     
 }
-class Words {
+class Words implements Word{
     // class to store forth words
 
+}
+class vm {
+    // forth vm to run compiled code
 }
